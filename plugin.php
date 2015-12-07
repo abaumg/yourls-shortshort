@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Sample Plugin
-Plugin URI: http://yourls.org/
-Description: Sample plugin to illustrate how actions and filters work. Read its source. Refer to the <a href="http://yourls.org/pluginapi">Plugin API documentation</a> for more details.
+Plugin Name: Shortshort
+Plugin URI: https://bitbucket.org/abaumg/yourls-shortshort
+Description: This plugin for YOURLS checks if a long URL is in fact already shortened (e.g. t.co, bit.ly, youtu.be) etc. The purpose is to avoid nested shortened links.
 Version: 0.1
-Author: Ozh
-Author URI: http://ozh.org/
+Author: abaumg
+Author URI: http://www.andreas.bz.it/
 */
 
 // No direct call

@@ -1,6 +1,5 @@
-Sample Plugin
+Shortshort
 =============
-This is a sample plugin, for illustration purpose.
-Don't modify this plugin. Instead, copy its folder
-and modify your own copy. This way, your code won't
-be overwritten when you upgrade YOURLS.
+This plugin checks if a long URL is in fact already
+shortened (e.g. t.co, bit.ly, youtu.be) etc. The 
+purpose is to avoid nested shortened links.
