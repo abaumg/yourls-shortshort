@@ -34,5 +34,9 @@ function abaumg_shortshort_check_and_bypass($is_short, $url)
 		$return['errorCode'] = '400';
 		return $return;
 	}
+  else
+  {
+    return FALSE;
+  }
 }
 ?>
