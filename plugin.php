@@ -13,18 +13,20 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
 yourls_add_filter('shunt_add_new_link', 'abaumg_shortshort_check_and_bypass');
 
+
+if (!function_exists('yourls_http_head'))
+{
+	function yourls_http_head( $url, $headers = array(), $data = array(), $options = array() ) {
+		return yourls_http_request( 'HEAD', $url, $headers, $data, $options );
+	}
+}
+
+
 function abaumg_shortshort_check_and_bypass($is_short, $url)
 {
-	$hostnames_to_bypass = array	(
-										't.co',
-										'twitter.com',
-										'bit.ly',
-										'youtu.be'
-									);
-
-	$urltoshorten_hostname = parse_url($url, PHP_URL_HOST);
-
-	if (in_array(strtolower($urltoshorten_hostname), $hostnames_to_bypass))
+	$return = yourls_http_head($url);
+	$redirectcount = $return->redirects;
+	if ($redirectcount > 0)
 	{
 		# Don't shorten the URL!
 		$return = array();
