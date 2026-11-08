@@ -38,7 +38,7 @@ function abaumg_shortshort_check_and_bypass($is_short, $url)
 	}
   else
   {
-    return FALSE;
+    return $is_short;
   }
 }
 ?>
